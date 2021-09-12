@@ -1,17 +1,41 @@
-<form (ngSubmit)="login()">
-  <input
-    type="text"
-    name="username"
-    id="username"
-    placeholder="username"
-    [(ngModel)]="username"
+<div class="p-fluid header">
+  <img
+    class="logo"
+    src="../../../assets/img/logo-icon.jpg"
+    alt="Sistema de Gestão empresaria Spen Source"
   />
-  <input
-    type="password"
-    name="password"
-    id="password"
-    placeholder="password"
-    [(ngModel)]="password"
-  />
-  <button type="submit">Entrar</button>
-</form>
+</div>
+<div class="auth-form">
+  <div class="auth-form-header">
+    <span>Faça login no SGEOS</span>
+  </div>
+  <div class="p-fluid auth-form-body p-shadow-2">
+    <form (ngSubmit)="login()">
+      <div class="p-field">
+        <label for="username">Usuário</label>
+        <input
+          type="text"
+          pInputText
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+        />
+      </div>
+      <div class="p-field">
+        <div class="label-link">
+          <label for="password">Senha</label>
+          <a href="/forgot-password" class="link">Esqueceu a senha?</a>
+        </div>
+        <p-password
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="password"
+          [toggleMask]="true"
+          [feedback]="false"
+        ></p-password>
+      </div>
+      <button pButton type="submit" label="LOGIN"></button>
+    </form>
+  </div>
+</div>
