@@ -12,6 +12,8 @@ import { PanelMenuComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     ToolbarComponent,
     ContentComponent,
     FooterComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     ButtonModule,
     SplitButtonModule,
     PanelMenuModule,
+    BreadcrumbModule,
   ],
   exports: [DashboardComponent],
 })

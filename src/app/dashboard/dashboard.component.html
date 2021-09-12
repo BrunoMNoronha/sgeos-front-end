@@ -2,14 +2,20 @@
   <app-toolbar></app-toolbar>
 </header>
 <div class="container">
-  <div class="row">
-    <nav class="sidebar">
+  <nav class="sidebar">
+    <div>
       <app-sidebar></app-sidebar>
-    </nav>
-    <main class="main p-d-flex p-flex-column">
-      <div class="breadcrumb"></div>
-      <div class="content"></div>
-      <div class="footer"></div>
-    </main>
-  </div>
+    </div>
+  </nav>
+  <main class="main p-d-flex p-flex-column">
+    <div class="breadcrumb">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+    <div class="content">
+      <app-content></app-content>
+    </div>
+    <div class="footer">
+      <app-footer></app-footer>
+    </div>
+  </main>
 </div>

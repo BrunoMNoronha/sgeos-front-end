@@ -1,25 +1,28 @@
-.dashboard {
-  flex: 0;
-  height: auto;
-  background-color: blue;
-}
-
-.sidebar {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  padding: 63px 0 0;
-  box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%);
-}
-
-.main {
-  background-color: orange;
-}
-
 .header {
   box-shadow: 0 4px 2px -2px gray;
   z-index: -1;
+}
+
+.container {
+  background-color: blue;
+  height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #f8f9fa;
+}
+
+.main {
+  background-color: #fff;
+  width: 100%;
+}
+.footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
 }
