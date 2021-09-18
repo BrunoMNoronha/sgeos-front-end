@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { AuthService } from 'src/app/auth/Auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,7 +11,7 @@ import { MenuItem } from 'primeng/api';
 export class ToolbarComponent implements OnInit {
   items: MenuItem[];
 
-  constructor() {
+  constructor(private authService: AuthService, private router: Router) {
     this.items = [];
   }
 
@@ -23,7 +25,10 @@ export class ToolbarComponent implements OnInit {
       {
         label: 'Sair',
         icon: 'pi pi-sign-out',
-        routerLink: '/logout',
+        command: () => {
+          this.authService.logout();
+          this.router.navigate(['login']);
+        },
       },
     ];
   }

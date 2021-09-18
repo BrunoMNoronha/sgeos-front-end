@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import jwt_decode from 'jwt-decode';
@@ -25,12 +24,13 @@ export class LoginComponent implements OnInit {
   login() {
     this.authService.authenticate(this.username, this.password).subscribe(
       (response) => {
-        this.authService.logout();
         const token: string = jwt_decode(response.token);
         const id: any = token.sub;
         this.authService.setToken(response.token);
-        this.userService.getUserById(id);
-        this.router.navigate(['/dashboard']);
+        this.userService.getUserById(id).subscribe((user) => {
+          this.authService.setLoggedInUser(user);
+          this.router.navigate(['/dashboard']);
+        });
       },
       (error) => {
         console.log(error);

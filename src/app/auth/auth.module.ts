@@ -10,10 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
-import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
-  declarations: [LoginComponent, LogoutComponent],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
