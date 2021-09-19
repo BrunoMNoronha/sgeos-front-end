@@ -1,36 +1,21 @@
+.container {
+  background-color: #f8f9fa;
+  display: flex;
+  height: 100vh;
+}
 .header {
-  padding-top: 32px;
-  padding-bottom: 12px;
   text-align: center;
 }
 .logo {
-  width: 148px;
+  width: 128px;
 }
 .auth-form {
-  width: 340px;
-  margin: 0 auto;
+  width: 300px;
+  margin: auto auto;
 }
 
 .auth-form-header {
   font-size: 24px;
-  letter-spacing: -0.5px;
   text-align: center;
   font-weight: 100;
-  margin: 0.7em 0;
-}
-
-.auth-form-body {
-  border-radius: 6px;
-  padding: 20px;
-  font-size: 14px;
-}
-
-.label-link {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.link {
-  text-decoration: none;
 }

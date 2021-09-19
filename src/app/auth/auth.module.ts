@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
@@ -20,6 +21,7 @@ import { AuthInterceptor } from './auth.interceptor';
     InputTextModule,
     PasswordModule,
     ButtonModule,
+    CardModule,
   ],
   providers: [
     {
