@@ -4,3 +4,8 @@
 .logo {
   height: 37px;
 }
+
+span {
+  line-height: 37px;
+  font-weight: 700;
+}

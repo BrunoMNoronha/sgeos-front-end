@@ -4,11 +4,11 @@ import { MenuItem } from 'primeng/api';
 import { AuthService } from 'src/app/auth/Auth.service';
 
 @Component({
-  selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css'],
+  selector: 'app-topbar',
+  templateUrl: './topbar.component.html',
+  styleUrls: ['./topbar.component.css'],
 })
-export class ToolbarComponent implements OnInit {
+export class TopbarComponent implements OnInit {
   items: MenuItem[];
 
   constructor(private authService: AuthService, private router: Router) {

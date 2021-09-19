@@ -8,30 +8,18 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { PanelMenuComponent } from './sidebar/sidebar.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
-import { FooterComponent } from './footer/footer.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    PanelMenuComponent,
-    ToolbarComponent,
-    ContentComponent,
-    FooterComponent,
-    BreadcrumbComponent,
-  ],
+  declarations: [DashboardComponent, ContentComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    ToolbarModule,
     ButtonModule,
     SplitButtonModule,
     PanelMenuModule,
-    BreadcrumbModule,
+    SharedModule,
   ],
   exports: [DashboardComponent],
 })

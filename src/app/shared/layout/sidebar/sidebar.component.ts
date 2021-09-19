@@ -6,7 +6,7 @@ import { MenuItem } from 'primeng/api';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
 })
-export class PanelMenuComponent implements OnInit {
+export class SidebarComponent implements OnInit {
   items: MenuItem[];
 
   constructor() {

@@ -108,7 +108,9 @@ section {
 }
 body {
   line-height: 1;
-  min-height: 100vh;
+  min-height: calc(100vh - 71px);
+  height: auto;
+  margin: 0;
 }
 ol,
 ul {
